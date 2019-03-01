@@ -32,14 +32,14 @@ class App extends Component {
     return (
       <div className="App">
         <nav>
-          <NavLink exact to="/" activeClassName="">The Village</NavLink>
-          <NavLink to="/smurf-form" activeClassName="">Add Smurf?</NavLink>
-          <NavLink to="/gargamel" activeClassName="">Gargamel's Lab</NavLink>
+          <NavLink exact to="/" activeClassName="blueberry">The Village</NavLink>
+          <NavLink to="/smurf-add" activeClassName="blueberry">Add Smurf?</NavLink>
+          <NavLink to="/gargamel" activeClassName="blueberry">Gargamel's Lab</NavLink>
         </nav>
         <Route exact path="/" render={props => (
           <Smurfs smurfs={this.state.smurfs} />
         )} />
-        <Route path="/smurf-form" component={SmurfForm} />
+        <Route path="/smurf-add" component={SmurfForm} />
         <Route path="/gargamel" render={props => (<Gargamel smurfs={this.state.smurfs} />)} />
       </div>
     );
