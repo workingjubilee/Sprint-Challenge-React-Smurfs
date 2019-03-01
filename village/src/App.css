@@ -1,3 +1,25 @@
 .App {
   text-align: center;
 }
+
+button {
+  padding: 10px;
+  margin: 5px;
+  color: white;
+  background-color: #c1a0dd;
+  font-weight: bold;
+}
+
+a {
+  text-decoration: none;
+  padding: 10px;
+  margin: 10px;
+  color: white;
+  border: 1px solid white;
+}
+
+body {
+  background-color: #a0a9ff;
+  color: white;
+  padding: 2%;
+}

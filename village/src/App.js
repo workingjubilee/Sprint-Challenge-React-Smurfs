@@ -5,6 +5,7 @@ import { Route, NavLink } from 'react-router-dom';
 import './App.css';
 import SmurfForm from './components/SmurfForm';
 import Smurfs from './components/Smurfs';
+import Gargamel from './components/Gargamel';
 
 class App extends Component {
   constructor(props) {
@@ -33,11 +34,13 @@ class App extends Component {
         <nav>
           <NavLink exact to="/" activeClassName="">The Village</NavLink>
           <NavLink to="/smurf-form" activeClassName="">Add Smurf?</NavLink>
+          <NavLink to="/gargamel" activeClassName="">Gargamel's Lab</NavLink>
         </nav>
         <Route exact path="/" render={props => (
           <Smurfs smurfs={this.state.smurfs} />
         )} />
         <Route path="/smurf-form" component={SmurfForm} />
+        <Route path="/gargamel" render={props => (<Gargamel smurfs={this.state.smurfs} />)} />
       </div>
     );
   }
